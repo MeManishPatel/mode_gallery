@@ -1,6 +1,6 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppSizes{
-  static double bodyCurveRadius = 30.r;
-  static double appBarIconSize = 30.h;
+   double bodyCurveRadius = 20.r;
+   double appBarIconSize = 20.h;
 }

@@ -1,9 +1,9 @@
 {
-  "data": [
+  "imageData": [
     {
-      "id": 1,
-      "title": "AI Beauty",
-      "images": [
+      "category_id": 1,
+      "category_title": "AI Beauty",
+      "category_images": [
         "https://cdn.pixabay.com/photo/2023/08/20/08/18/ai-generated-8201922_1280.png",
         "https://cdn.pixabay.com/photo/2018/03/22/18/33/moe-3251432_1280.png",
         "https://cdn.pixabay.com/photo/2023/08/17/02/19/ai-generated-8195314_640.jpg",
@@ -112,9 +112,9 @@
       ]
     },
     {
-      "id": 2,
-      "title": "AI Avatar",
-      "images": [
+      "category_id": 2,
+      "category_title": "AI Avatar",
+      "category_images": [
         "https://cdn.pixabay.com/photo/2023/08/25/18/47/ai-generated-8213493_640.png",
         "https://cdn.pixabay.com/photo/2023/08/25/18/46/ai-generated-8213491_640.png",
         "https://cdn.pixabay.com/photo/2023/08/25/18/47/ai-generated-8213495_640.png",
@@ -152,18 +152,18 @@
       ]
     },
     {
-      "id": 3,
-      "title": "Animal",
-      "images": [
+      "category_id": 3,
+      "category_title": "Animal",
+      "category_images": [
         "https://cdn.pixabay.com/photo/2020/07/17/06/41/cat-5413170_640.jpg",
         "https://cdn.pixabay.com/photo/2019/09/04/02/52/animal-4450613_640.jpg",
         "https://cdn.pixabay.com/photo/2019/11/12/15/07/horse-4621253_640.jpg"
       ]
     },
     {
-      "id": 4,
-      "title": "Nature",
-      "images":[
+      "category_id": 4,
+      "category_title": "Nature",
+      "category_images":[
         "https://cdn.pixabay.com/photo/2023/04/19/17/20/ai-generated-7938200_640.jpg",
         "https://cdn.pixabay.com/photo/2023/06/13/10/38/girl-8060645_640.jpg",
         "https://cdn.pixabay.com/photo/2023/08/10/23/30/city-8182491_640.jpg",
@@ -242,9 +242,9 @@
       ]
     },
     {
-      "id": 5,
-      "title": "Butterfly",
-      "images":[
+      "category_id": 5,
+      "category_title": "Butterfly",
+      "category_images":[
         "https://cdn.pixabay.com/photo/2018/11/20/12/54/butterfly-3827374_640.jpg",
         "https://cdn.pixabay.com/photo/2021/06/27/17/24/bee-6369484_640.jpg",
         "https://cdn.pixabay.com/photo/2021/05/12/10/09/common-blue-6247877_640.jpg",
@@ -274,11 +274,10 @@
       ]
     },
     {
-      "id": 6,
-      "title": "Space",
-      "images":[
+      "category_id": 6,
+      "category_title": "Space",
+      "category_images":[
         "https://cdn.pixabay.com/photo/2023/03/13/05/39/ai-generated-7848934_640.jpg",
-        "https://cdn.pixabay.com/photo/2023/03/26/01/16/watercolor-7877259_640.jpghttps://cdn.pixabay.com/photo/2023/01/21/15/30/ai-generated-7734547_640.jpg",
         "https://cdn.pixabay.com/photo/2023/01/25/10/46/ai-generated-7743183_640.jpg",
         "https://cdn.pixabay.com/photo/2023/01/25/10/48/ai-generated-7743218_640.jpg",
         "https://cdn.pixabay.com/photo/2023/01/25/10/44/ai-generated-7743141_640.jpg",
@@ -306,9 +305,9 @@
       ]
     },
     {
-      "id": 7,
-      "title": "Sad Boy",
-      "images":[
+      "category_id": 7,
+      "category_title": "Sad Boy",
+      "category_images":[
         "https://cdn.pixabay.com/photo/2021/06/30/16/16/background-6377144_640.jpg",
         "https://cdn.pixabay.com/photo/2023/03/21/15/09/ai-generated-7867487_640.jpg",
         "https://cdn.pixabay.com/photo/2023/04/13/18/54/ai-generated-7923261_640.jpg",
@@ -320,9 +319,9 @@
       ]
     },
     {
-      "id": 8,
-      "title": "Lion & Tiger",
-      "images":[
+      "category_id": 8,
+      "category_title": "Lion & Tiger",
+      "category_images":[
         "https://cdn.pixabay.com/photo/2012/11/21/17/02/lion-66898_1280.jpg",
         "https://cdn.pixabay.com/photo/2018/01/30/15/10/lion-3118953_640.jpg",
         "https://cdn.pixabay.com/photo/2017/10/13/10/47/pattern-2847314_640.jpg",
@@ -339,9 +338,9 @@
       ]
     },
     {
-      "id": 9,
-      "title": "Cat",
-      "images":[
+      "category_id": 9,
+      "category_title": "Cat",
+      "category_images":[
         "https://cdn.pixabay.com/photo/2023/07/31/09/54/cat-8160670_640.png",
         "https://cdn.pixabay.com/photo/2023/07/31/09/57/cat-8160678_640.png",
         "https://cdn.pixabay.com/photo/2019/12/04/00/43/cat-4671403_640.jpg",
@@ -353,9 +352,9 @@
       ]
     },
     {
-      "id": 10,
-      "title": "Art",
-      "images":[
+      "category_id": 10,
+      "category_title": "Art",
+      "category_images":[
         "https://cdn.pixabay.com/photo/2016/03/31/18/10/butterflies-1294178_640.png",
         "https://cdn.pixabay.com/photo/2018/03/20/17/09/butterfly-3243899_640.jpg",
         "https://cdn.pixabay.com/photo/2023/07/30/19/34/woman-8159571_640.png"

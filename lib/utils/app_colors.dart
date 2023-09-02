@@ -7,5 +7,8 @@ class AppColors{
   static Color appBackgroundColor = Colors.white;
   static Color whiteColor = Colors.white;
   static Color appBarTitleColor = Colors.white;
+  static Color blackColor = Colors.black;
+  static Color transparentColor = Colors.transparent;
+  static Color blueColor = Colors.blue;
 
 }
