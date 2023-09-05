@@ -22,13 +22,9 @@ class HomeScreenController extends GetxController {
   getHomeData({required int pageNum}) async {
     updateLoadingState(status: true);
     var jsonData = await rootBundle.loadString("assets/image_list_model.json");
-    print("object =>1 ${jsonData}");
-    print("object =>11 ${json.decode(jsonData).runtimeType}");
     final data = HomeDataModel.fromJson(json.decode(jsonData));
-    print("object =>2 ${data.toJson()}");
       if (data.imageData != null && data.imageData!.isNotEmpty) {
         homeDataList = data.imageData!;
-        print("object =>3 ${homeDataList.length}");
       }
 
     updateLoadingState(status: false);

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:mode_gallery/controller/home_screen_controller.dart';
-import 'package:mode_gallery/model/home_data_model.dart';
 import 'package:mode_gallery/screens/full_screen_image_view_screen.dart';
 import 'package:mode_gallery/screens/image_list_screen.dart';
 import 'package:mode_gallery/utils/app_colors.dart';

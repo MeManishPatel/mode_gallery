@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:mode_gallery/utils/app_colors.dart';
 import 'package:mode_gallery/utils/app_sizes.dart';
 import 'package:shimmer/shimmer.dart';
@@ -27,7 +28,7 @@ class CustomWidget{
           Text(title, style: TextStyle(color: AppColors.appBarTitleColor, fontSize: 18.sp, fontWeight: FontWeight.w600)),
           const Spacer(),
           actionButtons ==null || actionButtons.isEmpty ? SizedBox(width: 25.w):Row(
-            children: actionButtons!,
+            children: actionButtons,
           ),
           SizedBox(width: 10.w),
 
@@ -105,5 +106,30 @@ class CustomWidget{
     );
   }
 
+  static loadingWidget({String? loadingText}){
+    // return SpinKitPumpingHeart(
+    //   size: 100.h,
+    //   color: AppColors.appBarColor,
+    // );
+    return Container(
+      height: 80.h,
+      padding: EdgeInsets.symmetric(horizontal: 30.w),
+      // width: 200.w,
+      decoration: BoxDecoration(
+        color: AppColors.whiteColor,
+        borderRadius: BorderRadius.circular(10.r)
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          CircularProgressIndicator(color: AppColors.blueColor,semanticsLabel: "semanticsLabel",),
+          SizedBox(width: 30.w,),
+          Text(loadingText ?? "Loading", style: TextStyle(color: AppColors.blackColor, fontSize: 16.sp),),
+        ],
+      ),
+    );
+  }
 
 }
