@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:mode_gallery/common/app_constants.dart';
 import 'package:mode_gallery/controller/home_screen_controller.dart';
 import 'package:mode_gallery/screens/full_screen_image_view_screen.dart';
 import 'package:mode_gallery/screens/image_list_screen.dart';
+import 'package:mode_gallery/screens/image_slider_viewer.dart';
 import 'package:mode_gallery/utils/app_colors.dart';
 import 'package:mode_gallery/utils/app_sizes.dart';
 import 'package:mode_gallery/utils/custom_widgets/custom_widget.dart';
@@ -29,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.appBackgroundColor,
+        backgroundColor: AppColors.appBarColor,
         body: buildBody(context),
         floatingActionButton: FloatingActionButton.small(
           onPressed: (){
@@ -52,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Stack(
       children: [
         CustomWidget.customAppBar(
-          title: "Welcome to Mode Gallery", actionButtons: [],
+          title: AppConstant.homeScreenTitle, actionButtons: [],
         ),
         GetBuilder<HomeScreenController>(
           builder: (context) {
@@ -62,7 +64,19 @@ class _HomeScreenState extends State<HomeScreen> {
               margin: EdgeInsets.only(top: 60.h),
               decoration: BoxDecoration(
                 color: AppColors.appBackgroundColor,
-                borderRadius: BorderRadius.circular(AppSizes().bodyCurveRadius),
+                // borderRadius: BorderRadius.circular(AppSizes().bodyCurveRadius),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(AppSizes().bodyCurveRadius),
+                  topRight: Radius.circular(AppSizes().bodyCurveRadius),
+                ),
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    AppColors.whiteColor,
+                    AppColors.blackColor,
+                  ],
+                )
               ),
               child: buildImageDataList(),
             );
@@ -82,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
         itemCount: homeScreenController.homeDataList.length,
         separatorBuilder: (context, index){
           // return Divider(color: AppColors.appBarColor, height: 10.h, thickness: 3.h);
-          return SizedBox(height: 10.h);
+          return SizedBox(height: 0.h);
         },
         itemBuilder: (context, index){
           var data = homeScreenController.homeDataList[index];
@@ -102,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         onTap: (){
                           Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context)=>ImageListScreen(imageData: data)));
+                              MaterialPageRoute(builder: (context)=>ImageSliderViewer(imageData: data)));
                         },
                         child: Text(
                           'View All',
@@ -112,7 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 SizedBox(
-                  height: 130.h,
+                  height: 170.h,
                   width: ScreenUtil().screenWidth,
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
@@ -128,7 +142,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         onTap: (){
                           Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context)=>FullScreenImageViewScreen(imageUrl: imageData)
+                              MaterialPageRoute(builder: (context)=>FullScreenImageViewScreen(
+                                imageData:  data,
+                                index: index,
+                              )
                               )
                           );
                         },
@@ -143,6 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       },
                   ),
                 ),
+                SizedBox(height: 15.h),
               ],
             ),
           );

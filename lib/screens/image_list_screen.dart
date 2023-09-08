@@ -77,20 +77,23 @@ class _ImageListScreenState extends State<ImageListScreen> {
         itemBuilder: (BuildContext ctx, index) {
           return  Padding(
             padding:  EdgeInsets.only(top: index==0 || index==1 ?5.h:0),
-            child: imageWidget(imageData!.categoryImages![index]),
+            child: imageWidget(imageData!.categoryImages![index], index),
           );
         },
       ),
     );
   }
 
-  Widget imageWidget(String imageUrl) {
+  Widget imageWidget(String imageUrl, int index) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => FullScreenImageViewScreen(imageUrl: imageUrl,)
+            builder: (context) => FullScreenImageViewScreen(
+              imageData: widget.imageData,
+              index: index,
+            )
           ),
         );
       },

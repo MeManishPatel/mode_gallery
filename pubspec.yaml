@@ -44,6 +44,8 @@ dependencies:
   dio: ^5.3.2
   gallery_saver: ^2.3.2
   fluttertoast: ^8.2.2
+  theme_provider: ^0.6.0
+
 
 dev_dependencies:
   flutter_test:

@@ -44,8 +44,8 @@ class CustomWidget{
         clipBehavior: circularImage ? Clip.antiAlias : Clip.none,
         margin: EdgeInsets.symmetric(horizontal: 0.w, vertical: 0.h),
         decoration: BoxDecoration(
-            color: Colors.red.withOpacity(0.0),
-            borderRadius: BorderRadius.circular(10.r),
+          color: AppColors.transparentColor,
+          borderRadius: BorderRadius.circular(10.r),
         ),
         child: CachedNetworkImage(
           imageUrl: url,
@@ -129,6 +129,98 @@ class CustomWidget{
           Text(loadingText ?? "Loading", style: TextStyle(color: AppColors.blackColor, fontSize: 16.sp),),
         ],
       ),
+    );
+  }
+
+  static appBarMenuButton({required void Function() onTap}){
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        height: AppSizes().appBarButtonSize,
+        width: AppSizes().appBarButtonSize,
+        decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: AppColors.appBarColor,
+            boxShadow: [
+              BoxShadow(
+                  offset: const Offset(-2, -2),
+                  color: AppColors.appBarTitleColor,
+                  blurRadius: 12.r,
+                  spreadRadius: 1.r
+              )
+            ]
+        ),
+        child: Icon( Icons.more_vert,color: AppColors.appBarTitleColor,)
+      ),
+    );
+  }
+
+  static downloadButton({required VoidCallback callback}) {
+    return GestureDetector(
+      onTap: callback,
+      child: Container(
+        height: 50.h,
+        width: 50.h,
+        decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: AppColors.appBarColor,
+            boxShadow:[
+              BoxShadow(
+                color: AppColors.appBarTitleColor,
+                offset: Offset(
+                    0.h, 0.h
+                ),
+                blurRadius: 10.r,
+                spreadRadius: 5.r,
+              ),
+            ]
+        ),
+        child: Icon(Icons.file_download_outlined, color: AppColors.appBarTitleColor,),
+      ),
+    );
+  }
+
+  static favoriteButton() {
+    return Container(
+      height: 50.h,
+      width: 50.h,
+      decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: AppColors.appBarColor,
+          boxShadow:[
+            BoxShadow(
+              color: AppColors.appBarTitleColor,
+              offset: Offset(
+                  0.h, 0.h
+              ),
+              blurRadius: 10.r,
+              spreadRadius: 5.r,
+            ),
+          ]
+      ),
+      child: Icon(Icons.favorite_border_outlined, color: AppColors.appBarTitleColor,),
+    );
+  }
+
+  static setAsWallpaperButton() {
+    return Container(
+      height: 50.h,
+      width: 50.h,
+      decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: AppColors.appBarColor,
+          boxShadow:[
+            BoxShadow(
+              color: AppColors.appBarTitleColor,
+              offset: Offset(
+                0.h, 0.h
+              ),
+              blurRadius: 10.r,
+              spreadRadius: 5.r,
+            ),
+          ]
+      ),
+      child: Icon(Icons.settings_cell_rounded, color: AppColors.appBarTitleColor,),
     );
   }
 
